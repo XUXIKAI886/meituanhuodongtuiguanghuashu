@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美团外卖活动推广专业话术 - 呈尚策划</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #FFD100;
+            --secondary-color: #FF6B00;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #FFF8E1;
+            --bg-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFFFFF 100%);
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .brand-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* 导航栏 */
+        .nav {
+            background: var(--bg-white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 120px;
+            z-index: 999;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 0.5rem 1.5rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: var(--primary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* 主内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem 2rem;
+        }
+
+        /* 章节卡片 */
+        .section-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .subsection-title {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        /* 话术卡片 */
+        .script-card {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .script-card:hover {
+            background: #FFF3CD;
+            border-left-color: var(--secondary-color);
+        }
+
+        .script-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .script-title::before {
+            content: "💬";
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .script-content {
+            color: var(--text-dark);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #555555 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .brand-logo {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .nav {
+                top: 100px;
+            }
+
+            .nav-content {
+                padding: 0 1rem;
+                gap: 0.5rem;
+            }
+
+            .nav-item {
+                padding: 0.4rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 0 1rem 1rem;
+            }
+
+            .section-card {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .script-card {
+                padding: 1rem;
+            }
+        }
+
+        /* 滚动行为优化 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 加载动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="brand-logo">🎯 呈尚策划</div>
+            <div class="subtitle">美团外卖活动推广专业话术集</div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#section-1" class="nav-item">满减活动</a>
+            <a href="#section-2" class="nav-item">减配送费</a>
+            <a href="#section-3" class="nav-item">买赠活动</a>
+            <a href="#section-4" class="nav-item">折扣商品</a>
+            <a href="#section-5" class="nav-item">优惠券系统</a>
+            <a href="#section-6" class="nav-item">新客立减</a>
+            <a href="#section-7" class="nav-item">精准营销</a>
+            <a href="#section-8" class="nav-item">活动组合</a>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="container">
+
+        <!-- 第一章：满减活动 -->
+        <section id="section-1" class="section-card">
+            <h2 class="section-title">一、满减活动话术</h2>
+
+            <h3 class="subsection-title">1.1 满减活动的作用与价值</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：排名提升角度</div>
+                <div class="script-content">
+                    "老板，我们分析了您店铺的数据，发现排名还有提升空间。满减活动是平台算法里权重很高的因素，设置合理的满减能直接提升您的自然排名。现在周边竞品基本都在做满减，我们如果不跟上的话,排名会被压得比较靠后，流量获取就会受影响。我们已经在帮您规划满减梯度，结合您店铺的客单价和利润空间，制定一个既有竞争力又不会亏本的方案。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：销量提升角度</div>
+                <div class="script-content">
+                    "从数据上看，您店铺的进店率还可以，但下单转化率偏低。很多顾客进来看了看就走了，主要是觉得没有占到便宜的感觉。满减活动能让顾客觉得实惠，降低他们的决策成本。我们观察到设置满减后，下单转化率一般能提升30%左右。关键是要把满减的门槛和力度设置好，既要让顾客觉得划算，又要控制好成本，这个我们会根据您的实际情况来调整。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：客单价提升角度</div>
+                <div class="script-content">
+                    "老板，您店铺现在的客单价在28块左右，其实还有提升空间。满减活动设置得好，能引导顾客多点一些商品凑单。比如我们设置满30减5、满50减10这种梯度，顾客原本想点25块的，看到满30能减5块，就会再加个小菜凑单。这样客单价就上去了，您的营业额也能增长。我们会根据您的商品价格结构来设计满减梯度，让顾客既觉得划算，又能帮您提升客单价。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：多重作用综合说明</div>
+                <div class="script-content">
+                    "满减活动对咱们店铺有三个核心作用：第一是提升排名，平台算法里满减权重很高；第二是提高销量，顾客看到优惠下单意愿会更强；第三是拉高客单价，通过合理的满减门槛引导顾客凑单。现在外卖市场竞争激烈，不做满减基本没什么竞争力。我们会帮您设计一个三档满减方案，低中高三个档位覆盖不同消费需求，既能吸引新客又能提升老客的消费金额。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：竞品对比角度</div>
+                <div class="script-content">
+                    "我们看了下您周边的竞品情况，发现同品类的店铺基本都设置了满减活动，力度还不小。您店铺如果不做满减的话，顾客在对比的时候就会觉得您家没有优惠，很容易流失到竞品那边去。满减不只是给顾客优惠，更重要的是在顾客心里建立一个'这家店有活动、很实惠'的印象。我们已经在分析竞品的满减策略，会帮您制定一个既有竞争力又能保证利润的满减方案，不会让您在价格战里吃亏。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">1.2 满减活动三档设置策略</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：第一档低门槛引流</div>
+                <div class="script-content">
+                    "老板，满减的第一档是最关键的，这个是用来引流的。我们建议把门槛设置得低一点，比如满20减3或者满25减4，让大部分顾客都能够得着。优惠力度要足，让顾客一看就觉得划算。这一档主要目的不是赚钱，而是提高进店转化率，把顾客吸引过来下单。等顾客体验过您的产品觉得不错，后面就会复购了。我们会根据您的一人餐价格来设置这个门槛，确保覆盖到最多的潜在客户。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：第二档提升客单价</div>
+                <div class="script-content">
+                    "第二档满减的策略就不一样了，这个是用来提升客单价的。我们会把门槛设置得比套餐价格略高，比如您的双人套餐是38块，我们就设置满40减8。这样顾客看到差2块就能减8块，自然会再加个小菜凑单，客单价就上去了。这一档既能让顾客觉得占了便宜，又能帮您提升每单的营业额。我们在很多店铺都用过这个策略，效果很明显，客单价一般能提升15%-20%左右。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：第三档防拆单设计</div>
+                <div class="script-content">
+                    "第三档满减主要是针对多人聚餐的情况，防止顾客拆单。比如您有3-5人的套餐，价格在70块左右，我们就设置满80减18这种。这样顾客算下来发现一单下要比分开下划算，就不会拆单了。拆单对咱们店铺影响挺大的，一单变两单，虽然订单量上去了，但实际营业额没增加，配送成本和包装成本还翻倍了。这个第三档设置好了，既能锁住大单客户，又能降低咱们的运营成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：三档梯度整体设计</div>
+                <div class="script-content">
+                    "我们帮您设计的满减是三档梯度，每一档都有不同的作用。第一档门槛低力度大，主要是引流，让更多人进来下单；第二档门槛适中，引导顾客凑单提升客单价；第三档门槛高但优惠力度最大，锁住大单防止拆单。这三档配合起来，既能覆盖一人餐、两人餐、多人餐的不同需求，又能把每个消费场景的价值最大化。我们会根据您店铺的商品价格结构来精确设置每一档的门槛和力度，确保既有吸引力又能控制成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：数据驱动的梯度优化</div>
+                <div class="script-content">
+                    "老板，咱们设置满减梯度不能拍脑袋，要看数据。我们调取了您店铺过去30天的顾客消费金额分布，发现集中在25-35元、40-55元、70-90元这三个区间。所以我们建议满减设置为满28减5、满45减9、满75减16，正好卡在这三个消费高峰区间。这样设置的好处是每一档都能覆盖到大量顾客，不会出现满减门槛太高够不着或者太低没吸引力的情况。等活动跑一段时间后，我们再根据数据反馈来微调优化。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">1.3 满减与折扣商品叠加使用提醒</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：成本控制警示</div>
+                <div class="script-content">
+                    "老板，有件事要提醒您一下。咱们店铺现在既设置了满减活动，又有折扣商品，这两个是可以叠加的。顾客下单的时候既能享受商品折扣，又能用满减，优惠力度叠加起来就很大了。您要算好账，别到时候发现每单都在亏钱。我们建议要么降低满减力度，要么减少折扣商品的数量，两个活动的力度不能都太大，不然成本扛不住。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：活动组合策略建议</div>
+                <div class="script-content">
+                    "从运营角度来说，满减和折扣商品同时开确实能吸引顾客，但关键是要控制好叠加后的成本。我们建议这样：折扣商品选毛利率高的做，折扣力度控制在7-8折；满减设置得保守一点，第一档满30减4就够了。这样即使顾客全点折扣商品再用满减，咱们也不会亏。或者您可以把折扣商品设置每单限购，比如一单最多买1-2个折扣商品，这样既有吸引力又不会被薅羊毛。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：利润空间测算</div>
+                <div class="script-content">
+                    "咱们算笔账，如果顾客点了30块的折扣商品，按8折算是24块，再用满30减5的满减，实际只付19块。这个优惠力度相当于原价的6.3折了。您要看看这个折扣下来，扣掉食材成本、包装、配送这些，还能不能有利润。如果算下来是亏的，就要调整策略了。我们可以帮您测算不同组合下的利润空间，找到一个既有吸引力又不亏本的平衡点。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：分时段策略调整</div>
+                <div class="script-content">
+                    "老板，我们建议您可以分时段来调整满减和折扣的组合。比如高峰期11:30-13:00、17:30-19:30这个时段，订单量本来就多，可以把满减力度降低或者暂停折扣商品，保证利润。淡季时段再开大力度的满减加折扣，吸引顾客下单。这样既能在高峰期保证利润，又能在淡季时段冲单量，整体的营收会更健康。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：顾客感知度平衡</div>
+                <div class="script-content">
+                    "虽然满减和折扣叠加优惠力度大，但顾客的感知其实没那么明显。他们看到的是'哇，有折扣商品'或者'满减力度不错'，但很少会仔细算叠加后到底便宜了多少。所以我们建议把优惠重点放在一个上面，要么满减力度大一点折扣少一点，要么折扣力度大一点满减保守一点。这样既能保证吸引力，又不会因为叠加导致成本失控。顾客的感知差不多，但咱们的成本能控制得更好。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">1.4 满减活动智能调控与流量助手</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：智能调控节省成本</div>
+                <div class="script-content">
+                    "老板，咱们设置满减的时候有个智能调控功能，强烈建议您开启。这个功能是平台会根据订单情况，随机给一部分订单补贴津贴，比如您设置的满30减5，平台可能会给顾客显示满30减6，多出来的1块钱是平台出的。这样既能提升吸引力，又不增加您的成本。而且平台补贴是智能分配的，会优先补给那些转化率高的顾客，帮您节省营销成本的同时还能提升转化效果。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：流量助手额外曝光</div>
+                <div class="script-content">
+                    "满减活动里有个流量助手的选项，这个一定要勾选上。平台会把您节省下来的营销成本自动拿去买流量，给您店铺额外的曝光。比如您原本设置满30减5，开启智能调控后平台补贴了一部分，您实际成本可能只要4块，省下来的1块钱平台会帮您采买推广流量。这个是免费的额外曝光，不用白不用。我们帮您开启这个功能，让每一分钱的营销成本都发挥出最大价值。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：津贴机制说明</div>
+                <div class="script-content">
+                    "您可能注意到有顾客反馈说看到的满减金额和您设置的不一样，这个是正常的。因为开启智能调控后，平台会以满减加津贴的形式展示给顾客，津贴部分是平台随机补贴的，不会增加您的活动成本。系统会根据订单的成交概率来智能调控，对那些很可能下单的顾客多补一点，提高成交率。这个机制对咱们是有利的，既能提升订单量，实际成本还可能更低。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：成本优化实际案例</div>
+                <div class="script-content">
+                    "我们之前帮一个店铺开启了智能调控，效果很明显。原本他设置的是满40减8，预计每天成本200块。开启智能调控后，平台平均每单补贴1.5元左右，实际成本降到了150块，省下来的50块平台自动帮他买了推广流量，每天多带来20-30单。算下来既节省了成本，订单量还涨了。这个功能对咱们只有好处没有坏处，强烈建议您使用。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：与固定满减对比</div>
+                <div class="script-content">
+                    "您可以选择固定满减或者智能调控满减两种模式。固定满减就是您设置多少顾客就享受多少，成本可控但缺乏灵活性。智能调控是平台根据情况动态补贴，成本可能更低还能获得额外流量。从我们的经验来看，大部分店铺用智能调控效果更好，特别是新店和需要快速冲量的店铺。如果您比较在意成本的精确控制，可以先用固定满减；如果想要更好的性价比和更多曝光，就选智能调控。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二章：减配送费活动 -->
+        <section id="section-2" class="section-card">
+            <h2 class="section-title">二、减配送费活动话术</h2>
+
+            <h3 class="subsection-title">2.1 减配送费的作用与价值</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：用户敏感度分析</div>
+                <div class="script-content">
+                    "老板，从平台的数据来看，配送费对顾客下单的影响其实挺大的。很多顾客进店看了看商品觉得不错，但一看配送费要5-6块就放弃了。特别是订单金额不高的时候，配送费占比就显得很高，顾客会觉得不划算。我们分析了您店铺的流失数据，发现有30%左右的顾客是因为配送费高流失的。减配送费活动能直接降低这个门槛，提高进店转化率，让更多顾客愿意下单。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：距离远店铺的解决方案</div>
+                <div class="script-content">
+                    "您店铺的位置相对偏一点，配送距离普遍在3公里以上，配送费自然就高。这个对顾客下单影响很大，很多人看到配送费7-8块就直接走了。减配送费活动对咱们这种距离远的店铺特别有用，可以按距离设置不同的减免力度，比如3公里内减2块、3-5公里减3块，这样既能吸引远距离顾客，成本也可控。我们已经在分析您的配送范围和成本结构，会帮您制定一个合理的减配方案。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：提升搜索排名的间接作用</div>
+                <div class="script-content">
+                    "减配送费不只是让顾客少付钱，还能提升咱们店铺的搜索排名。因为配送费降低后，顾客的满意度会提高，好评率也会上去，这些都是平台算法的重要指标。满意度高、好评多的店铺，平台会给更多的自然流量推荐。所以减配送费虽然短期看是成本支出，但长期来说能带来更多免费流量，提升店铺整体排名，是个很值得做的投入。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：与竞品的竞争优势</div>
+                <div class="script-content">
+                    "我们看了下您周边的竞品，发现有几家都设置了减配送费活动。顾客在选择的时候肯定会对比，如果您家配送费比别人高，很容易就被比下去了。特别是距离差不多的情况下，顾客肯定选配送费低的那家。减配送费活动能帮您在竞争中占据优势，至少在配送费这个环节不会输给竞品。我们会参考竞品的配送策略，帮您制定一个既有竞争力又不会亏本的方案。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：下单量提升的综合效果</div>
+                <div class="script-content">
+                    "从我们服务的其他店铺数据来看，设置减配送费后订单量一般能提升20%-30%。因为配送费降低了，顾客的下单门槛就降低了，很多原本犹豫的顾客都会转化成订单。特别是小单客户，原本可能觉得点20块的东西配送费要5块不划算，现在配送费减到2-3块，下单意愿就强多了。虽然每单少赚点配送费，但订单量上去了，总营业额反而会增长。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三章：买赠活动 -->
+        <section id="section-3" class="section-card">
+            <h2 class="section-title">三、买赠活动话术</h2>
+
+            <h3 class="subsection-title">3.1 买赠活动的核心作用</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：降低顾客犹豫成本</div>
+                <div class="script-content">
+                    "老板，很多顾客在下单的时候都会犹豫，特别是第一次来的新客，不知道您家东西好不好吃。买赠活动能有效降低这个犹豫成本，顾客一看买一份还送个小菜或者饮料，会觉得很划算，下单的决心就更坚定了。从数据上看，设置买赠后新客的下单转化率能提升40%左右。我们会帮您选择合适的赠品，既能吸引顾客又不会增加太多成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：打造爆品引流利器</div>
+                <div class="script-content">
+                    "买赠活动是打造爆品最有效的方式之一。咱们选一个口味不错、成本可控的商品做主商品，再搭配一个小赠品，比如买鸡腿饭送可乐，或者买麻辣烫送小甜品。这样组合起来既有吸引力，又能快速提升这个商品的销量。等这个商品成了爆款，您的店铺整体曝光和排名都会上去。我们已经在分析您店铺的商品数据，会帮您选出最适合做买赠的商品。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：清理滞销库存策略</div>
+                <div class="script-content">
+                    "老板，您店里是不是有些食材或者商品卖得不太好，库存积压了？买赠活动正好可以帮您解决这个问题。把滞销的商品作为赠品，搭配热销商品一起卖出去，既能清库存又不会让顾客觉得赠品没价值。比如您的卤蛋最近卖得慢，可以设置买盖浇饭送卤蛋，这样既处理了库存，顾客也觉得占了便宜。我们会帮您梳理滞销商品清单，制定合理的买赠搭配方案。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：提升顾客满意度惊喜感</div>
+                <div class="script-content">
+                    "买赠活动最大的价值其实是给顾客制造惊喜感。顾客点完餐收到外卖，发现比预期多了个赠品，这种惊喜的体验会让他们对您的店铺印象特别好，好评率自然就上去了。特别是一些用心的小赠品，比如节日送个小礼物、天冷送热饮，这种细节最能打动人。顾客满意度高了，复购率也会跟着提升，这个对长期经营很重要。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：与满减活动的差异化优势</div>
+                <div class="script-content">
+                    "买赠和满减都是促销手段，但给顾客的感受不一样。满减是直接减钱，顾客感知到的是便宜；买赠是额外得到东西，顾客感知到的是占便宜。从心理学角度来说，'多得到'比'少付钱'的感受更强烈。而且买赠可以和满减同时使用，顾客既能享受满减优惠，又能拿到赠品，双重优惠的吸引力更大。我们建议您两种活动结合使用，效果会更好。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四章：折扣商品活动 -->
+        <section id="section-4" class="section-card">
+            <h2 class="section-title">四、折扣商品活动话术</h2>
+
+            <h3 class="subsection-title">4.1 折扣商品的作用与价值</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：快速冲单量策略</div>
+                <div class="script-content">
+                    "老板，如果您想快速提升订单量，折扣商品是最直接有效的方式。顾客在首页刷到您的店铺，一看有5折、6折的商品，很容易就被吸引进来下单了。低价促销的吸引力是最强的，能让顾客快速做决策。我们建议您选几个成本可控、口味不错的商品做折扣，设置4-6折的力度，这样既能冲量又不会亏太多。等单量上来了，店铺权重提升了，后面自然流量就会增加。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：新品推广利器</div>
+                <div class="script-content">
+                    "您要是有新品上架，折扣商品是最好的推广方式。新品没有销量和评价，顾客不敢尝试，通过打折可以降低他们的尝试成本。比如新品原价28元，设置7折只要20元，顾客觉得便宜就愿意试试。等新品积累了一定销量和好评，再恢复原价，转化率也不会掉。我们见过很多店铺用这个方法把新品快速推起来的，效果确实不错。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：节日促销抢市场</div>
+                <div class="script-content">
+                    "马上要到节假日了，这是外卖的消费高峰期，也是竞争最激烈的时候。折扣商品能帮您在这个时候抢占市场份额，把竞品的顾客吸引过来。我们建议您提前规划好节日折扣活动，选几个招牌菜做大力度折扣，比如4-5折，配合节日氛围营销。虽然短期利润会少一些，但能快速积累顾客和口碑，等节日过后这些新客如果体验好，很多会转化成老客持续复购。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：引流款打造方案</div>
+                <div class="script-content">
+                    "咱们可以把折扣商品当成引流款来打造。选一两个毛利率高、容易标准化的商品，设置比较低的折扣价格，作为店铺的引流爆款。顾客被这个低价吸引进来后，往往会顺便点其他正价商品，这样客单价就上去了。比如您的鸡腿饭成本8块，原价18块，打6折卖11块，虽然利润少了但能带来流量。顾客进店后再点个饮料、加个配菜，总营业额反而会增长。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：与满减的区别与配合</div>
+                <div class="script-content">
+                    "折扣商品和满减活动的作用不太一样。折扣商品针对具体某个商品降价，吸引力更直观，顾客一眼就能看到便宜了多少；满减是整单优惠，需要凑单门槛。两个活动可以配合使用，但要注意不能叠加享受，系统会自动选最优惠的那个。我们建议折扣商品选一两个做引流，满减覆盖全店商品提升客单价，这样搭配起来效果最好。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">4.2 折扣商品设置技巧</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：高毛利商品优先选择</div>
+                <div class="script-content">
+                    "老板，设置折扣商品首选那些毛利率高的。比如您的某个菜品成本10块，卖30块，毛利率有66%，这种商品即使打6折卖18块，毛利还有44%，不会亏本。如果选那些本来利润就薄的商品打折，可能就要亏钱了。我们会帮您分析每个商品的成本和毛利情况，筛选出适合做折扣的商品，确保在促销的同时还能保证基本利润。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：梯度折扣呈现</div>
+                <div class="script-content">
+                    "折扣商品建议设置梯度展示，比如4折、6折、7折、8折都有，给顾客更多选择。4-5折的超低折扣用来引流，数量控制在1-2个；6-7折的中等折扣覆盖主力商品，可以多设置几个；8折的轻度折扣用来辅助，保持一定吸引力但不影响利润。这样梯度展示既能满足不同顾客的需求，又能控制整体的促销成本，不会因为折扣力度太大导致亏损。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：每单限购控制成本</div>
+                <div class="script-content">
+                    "折扣商品一定要设置每单限购，不然可能被薅羊毛。我们建议把每单最多可购买折扣商品总数设置为1-2个，这样既能让顾客享受到优惠，又不会让他们一单全买折扣商品导致您亏本。比如您设置了3个商品打折，每单限购1个，顾客只能选其中一个享受折扣，其他商品必须原价购买。这个设置很重要，能有效控制促销成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：口感好价格实惠的商品优选</div>
+                <div class="script-content">
+                    "做折扣商品要选那些口味不错、价格公道的。这样的商品打完折后性价比更高，更容易赢得顾客认可。顾客吃完觉得好吃，下次还会再来，甚至会点其他正价商品。千万别选那些口味一般的商品打折，即使便宜顾客也不满意，反而影响店铺口碑。我们建议您选店里卖得最好、评价最高的几个商品来做折扣，这样既能保证顾客体验，又能快速积累好评。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：智能调控节省成本</div>
+                <div class="script-content">
+                    "折扣商品也可以开启智能调控功能，跟满减一样，平台会随机补贴一部分折扣，帮您节省成本。比如您设置6折，平台可能会补贴到5.5折，多出来的0.5折是平台出的。开启这个功能后，您的实际促销成本会更低，而且平台还会把节省的成本帮您采买流量，获得额外曝光。这个功能对咱们只有好处，强烈建议开启。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五章：优惠券系统 -->
+        <section id="section-5" class="section-card">
+            <h2 class="section-title">五、优惠券系统话术</h2>
+
+            <h3 class="subsection-title">5.1 集点返券的作用与策略</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：提升复购率核心工具</div>
+                <div class="script-content">
+                    "老板，集点返券是提升复购率最有效的方式之一。顾客在您店里下单后，知道再下几单就能获得优惠券，自然会想着再来。这个机制能把一次性顾客转化成忠诚客户。我们建议您设置7天内下3单返5元券，或者30天内下5单返10元券这种，门槛不要太高，让大部分顾客都有机会达成。这样能有效刺激顾客在短期内多次下单，培养他们的消费习惯。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：返券条件设置技巧</div>
+                <div class="script-content">
+                    "集点返券的门槛设置很关键，既要有吸引力又不能太难达成。我们看了您店铺的数据，顾客平均复购周期在10天左右，所以建议设置7天内下3单或者15天内下5单。如果设置30天内下10单，门槛太高大部分顾客达不到，活动效果就打折扣了。返券的优惠力度也要合理，一般设置5-10元的代金券，既能吸引顾客又不会增加太多成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：商品券vs代金券选择</div>
+                <div class="script-content">
+                    "集点返券可以选择发商品券或者代金券。商品券针对某个具体商品，比如返一张某个菜品的5折券，能定向促进某个商品的销量，但局限性比较强，顾客不一定想吃那个商品；代金券可以用在任何商品上，灵活性更高，顾客使用率也会更高。从我们的经验来看，代金券的核销率一般比商品券高30%左右。我们建议您优先选择代金券，如果确实想推某个商品再考虑商品券。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：有效期设置策略</div>
+                <div class="script-content">
+                    "返券的有效期设置也很重要，建议选7天。太短了比如3天，顾客可能来不及用就过期了，会觉得不爽；太长了比如30天，顾客不着急用可能就忘了。7天刚刚好，既给顾客足够的时间安排，又能保持一定的紧迫感，促使他们尽快使用。我们统计过，7天有效期的券核销率能达到60%左右，30天有效期的只有40%，所以7天是最优选择。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：避免打击顾客积极性</div>
+                <div class="script-content">
+                    "设置集点返券的时候，一定要参考顾客的真实复购情况，不能拍脑袋。如果您的顾客平均一个月只下2单，您设置7天下5单的门槛，99%的顾客都达不到，这个活动就形同虚设了。反而会让顾客觉得您的活动在忽悠人，降低对店铺的好感度。我们会根据您的复购数据来设计合理的集点门槛，让大部分活跃顾客都有机会完成，这样才能真正起到促复购的作用。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">5.2 下单返券的作用与策略</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：立即刺激复购</div>
+                <div class="script-content">
+                    "老板，下单返券和集点返券不一样，它是顾客下单就立即返券，不用累积。这个对提升复购率的效果非常直接，顾客刚点完餐就收到一张券，很多人会想着下次用掉这张券再来点。从数据上看，使用下单返券的店铺，复购率能提升25%左右。关键是返券条件和优惠力度要设置合理，让顾客觉得下次用券划算，又不会因为门槛太低导致您成本失控。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：返券条件设置建议</div>
+                <div class="script-content">
+                    "返券条件建议设置得比您店铺的平均客单价高10%-20%。比如您的平均客单价是30元，就设置满33-36元返券。这样既能覆盖到大部分订单，又能引导顾客稍微多点一点凑单，提升客单价。如果设置得太高比如满50元才返券，很多小单客户享受不到，活动效果就打折扣了。我们会根据您的客单价分布来精确设置这个门槛，确保覆盖面够广又能提升客单价。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：券面值设置策略</div>
+                <div class="script-content">
+                    "返券的面值建议设置为返券条件的10%-15%。比如满36元返券，券面值设置4-5元比较合适。太少了比如只返2元，顾客会觉得没诚意，使用意愿不强；太多了比如返10元，您的成本就太高了。我们统计过，4-5元面值的券使用率在55%左右，既能吸引顾客又不会造成太大成本负担。而且这个优惠力度顾客感知度也比较强，会觉得值得再来。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：每天每人限返控制</div>
+                <div class="script-content">
+                    "下单返券一定要设置每天每人限返2张，这是平台的规则也是成本控制的需要。如果不限制，有些顾客可能一天下好几单狂薅羊毛，您的成本就失控了。限制每人每天2张，既能让正常顾客享受优惠，又能防止被恶意利用。这个限制大部分顾客都能接受，毕竟一天下2单以上的顾客还是少数，不会影响活动的整体效果。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：同享券的优势</div>
+                <div class="script-content">
+                    "下单返券可以设置成同享券，这个强烈建议开启。同享券的好处是可以和店内其他所有活动叠加使用，包括满减、折扣商品这些。顾客下单的时候既能用券又能享受其他优惠，吸引力更大，使用率也会更高。虽然叠加后您的优惠力度会大一点，但能显著提升顾客的复购率和满意度。从长期来看，复购带来的价值远远超过多给的这点优惠，是非常划算的投入。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第六章：新客立减 -->
+        <section id="section-6" class="section-card">
+            <h2 class="section-title">六、门店新客立减话术</h2>
+
+            <h3 class="subsection-title">6.1 新客立减的作用与价值</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：拉新转化核心工具</div>
+                <div class="script-content">
+                    "老板，新客立减是专门针对第一次在您店里下单的顾客的优惠，这个对拉新效果特别好。新客对您的店铺不了解，下单会犹豫，新客立减能直接降低他们的尝试成本。一般设置2-5元的立减，新客看到首单有优惠，下单意愿会强很多。从数据上看，设置新客立减后，新客转化率能提升35%左右。这个是咱们获取新客户最直接有效的方式。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：与满减活动叠加优势</div>
+                <div class="script-content">
+                    "新客立减最大的优势是可以和店内其他所有活动叠加使用，包括满减、折扣商品、买赠这些。也就是说新客下单的时候，既能享受新客立减，又能用满减，还能买折扣商品，优惠力度叠加起来非常大。这个对吸引新客特别有用，让他们第一次下单就觉得超值，体验好了后续复购的可能性就很高。我们建议您一定要开启这个活动，成本不高但拉新效果很明显。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：立减金额设置建议</div>
+                <div class="script-content">
+                    "新客立减的金额建议设置在2-5元之间。太少了比如只减1元，新客感知不强，吸引力有限；太多了比如减10元，您的成本太高不划算。我们统计过，3-4元是最优选择，既能让新客觉得有诚意，成本又可控。而且新客立减只针对每个顾客的第一单，后面就不能再享受了，所以总成本不会很高。按您店铺每天10-15个新客算，每天成本也就30-50块，但能带来的新客价值远远超过这个投入。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：与竞品的差异化竞争</div>
+                <div class="script-content">
+                    "我们看了您周边的竞品，发现有几家都设置了新客立减，力度在2-3元。如果您不做或者力度太小，新客在对比的时候很容易被竞品吸引走。现在外卖市场获客成本越来越高，一个新客的价值至少值10-15元，花3-4元成本把新客吸引过来，只要他后续复购一次就回本了。我们建议您设置3-5元的新客立减，至少在这个环节不输给竞品，甚至可以比他们力度大一点，抢占新客市场。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：长期价值vs短期成本</div>
+                <div class="script-content">
+                    "老板，新客立减虽然看起来是成本支出，但要算长期账。一个新客如果被您的产品和服务吸引了，后续可能会复购很多次，终身价值可能有几百上千元。花3-5元的新客立减成本换来一个长期客户，这个投入回报比是非常高的。而且新客立减能显著提升您店铺的新客转化率，让平台看到您对新客友好，算法也会给您更多新客流量推荐。从长期来看，这个是性价比很高的投入。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">6.2 新客立减设置策略</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：与其他活动的配合</div>
+                <div class="script-content">
+                    "新客立减设置的时候要考虑店内其他活动的力度。如果您的满减和折扣力度已经很大了，比如满30减10加6折商品，那新客立减可以设置得保守一点，2-3元就够了，因为叠加后优惠已经很大了。如果满减和折扣力度一般，新客立减就要设置得大一点，4-5元，保证新客首单的整体优惠有吸引力。我们会根据您店内所有活动的综合情况来平衡设置，确保既有竞争力又不会成本失控。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：活动时段全天覆盖</div>
+                <div class="script-content">
+                    "新客立减建议设置全天生效，不要限制时段。因为新客什么时候来是不确定的，如果只在某些时段有优惠，可能会错过很多潜在新客。而且新客立减每个顾客只能用一次，即使全天开放成本也可控。如果您特别担心成本，可以在高峰期适当降低满减力度，但新客立减还是建议保持，优先把新客引进来再说。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：简单直接易理解</div>
+                <div class="script-content">
+                    "新客立减最大的优点是简单直接，新客一看就明白首单能减几块钱，不用像满减那样还要凑单。这种简单明了的优惠方式对新客吸引力最强，不会让他们觉得复杂或者有套路。我们在设置的时候也是这样，就是一个固定的立减金额，新客下单自动享受，没有任何附加条件。这样的设置最能打消新客的顾虑，让他们放心下单尝试。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：单店唯一活动限制</div>
+                <div class="script-content">
+                    "要提醒您一下，一个店铺只能同时设置一个新客立减活动，不能设置多个。所以您要选好立减金额，一般我们建议设置3-5元就够了，不要设置太多个不同金额的活动去测试。如果想调整力度，可以先关闭当前活动再创建新的。我们会根据您的实际情况和竞品对比，帮您选定一个最合适的立减金额，然后持续运行，定期根据数据效果来调整优化。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：与新人立减的区别</div>
+                <div class="script-content">
+                    "新客立减和新人立减不一样，要注意区分。新客立减是针对第一次在您店里下单的顾客，哪怕他在美团外卖下过很多单，只要没在您家买过就算新客。新人立减是平台的活动，针对第一次在美团外卖下单的用户。新客立减是您自己的活动，成本您自己承担，但控制权在您手里。我们帮您设置的是新客立减，主要目的是把没在您家买过的顾客吸引过来，转化成您的客户。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第七章：精准营销 -->
+        <section id="section-7" class="section-card">
+            <h2 class="section-title">七、精准营销话术</h2>
+
+            <h3 class="subsection-title">7.1 精准营销的核心价值</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：降低营销成本提升ROI</div>
+                <div class="script-content">
+                    "老板，精准营销最大的价值是能降低您的营销成本，提高投入产出比。传统的满减、折扣是对所有顾客生效，包括那些本来就会下单的老客，这样就浪费了营销成本。精准营销能根据顾客类型定向发券，比如只给流失的高价值顾客发券，或者只给需要提升客单的顾客发券。这样每一分钱都花在刀刃上，营销效率会提升很多。从数据上看，精准营销的ROI一般是普通营销的2-3倍。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：老客复购挽回流失</div>
+                <div class="script-content">
+                    "咱们店铺有很多老客户最近一段时间没来了，这些流失的顾客其实是很有价值的。他们之前在您店里下过单，说明认可您的产品，只是可能被竞品吸引走了或者单纯忘了。精准营销可以针对这些流失顾客定向发券，比如给30天未下单的老客发一张5-10元的券，很多人看到优惠就会想起来再下一单。我们统计过，流失顾客通过精准券召回的成功率能达到40%左右，这个比开发新客的成本低很多。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：新客转化老客培养</div>
+                <div class="script-content">
+                    "精准营销还可以用来培养新客，把新客转化成忠诚老客。比如顾客第一次下单后，我们可以给他发一张下次使用的券，刺激他第二次下单。第二次下单后再发一张，让他形成习惯。通过这种方式逐步培养新客的复购习惯，把一次性顾客转化成长期客户。我们会根据顾客的下单频次和金额，设计不同的发券策略，精准地推动每个顾客的成长路径。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：提升特定商品销量</div>
+                <div class="script-content">
+                    "如果您想推某个新品或者提升某个商品的销量，精准营销可以发商品折扣券。比如您新上了一个招牌菜，可以给高价值顾客发这个商品的6折券，吸引他们尝试。因为这些高价值顾客本身消费能力强、下单频次高，他们认可了这个新品后会持续购买，还会带动其他顾客。这种定向推广比全店打折效率高多了，既能快速提升销量，成本又可控。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：数据驱动的精准投放</div>
+                <div class="script-content">
+                    "精准营销是基于数据分析来投放的，不是盲目发券。平台会根据顾客的历史行为，把他们分成不同类型：高价值顾客、潜力顾客、需提升客单顾客、流失顾客等等。我们可以针对不同类型的顾客发不同的券，实现精准触达。比如高价值顾客发大额券留住他们，需提升客单的顾客发满减券引导他们多花，流失顾客发无门槛券把他们召回。这种精准投放比传统营销效率高太多了。"
+                </div>
+            </div>
+
+            <h3 class="subsection-title">7.2 精准营销人群与场景策略</h3>
+
+            <div class="script-card">
+                <div class="script-title">话术1：高价值顾客维护</div>
+                <div class="script-content">
+                    "老板，您店里的高价值顾客虽然人数不多，但贡献了大部分营业额。我们分析了您的数据，发现20%的顾客贡献了60%的营业额，这部分顾客必须重点维护。精准营销可以给这些高价值顾客定期发券，比如每月发一张10-15元的无门槛券，让他们感受到VIP待遇，提升忠诚度。这个投入是非常值得的，因为流失一个高价值顾客的损失远远超过给他们的优惠成本。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术2：潜力顾客激活策略</div>
+                <div class="script-content">
+                    "您店里还有一批潜力高价值顾客，他们下单频次还可以但客单价偏低，如果能激活他们提升客单价，价值会非常大。我们可以给这些顾客发满减券，比如满50减10，引导他们提升消费金额。或者发商品券推荐您的高客单商品，让他们尝试。这种精准激活比全店促销效率高，因为针对的就是那些有潜力但还没充分激活的顾客。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术3：流失顾客召回方案</div>
+                <div class="script-content">
+                    "流失顾客的召回是精准营销最重要的应用场景之一。咱们可以设置30天未下单的顾客自动发一张召回券，力度要大一点比如8-10元无门槛券，给他们一个回来的理由。特别是那些之前是高价值顾客但最近流失的，这些人是重点召回对象。我们会持续监控流失情况，定期给流失顾客发券，尽可能把他们拉回来。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术4：特殊场景触发发券</div>
+                <div class="script-content">
+                    "精准营销还可以基于特定场景发券，效果很好。比如昨日进店未下单的顾客，说明他对您的店有兴趣但因为某些原因没下单，这时候发一张券可能就促成转化了。还有写好评的顾客，可以给他们发一张感谢券，既表达感谢又能促进复购。不评价的顾客也可以发券，刺激他们下次下单留评价。这些场景化的发券转化率特别高，因为时机和人群都很精准。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">话术5：发券数量与频率控制</div>
+                <div class="script-content">
+                    "精准营销虽好但要控制好频率，不能无限制地发券。平台规定每个店铺每月最多发5000张店铺券和5000张商品券，每个顾客每周最多领3张店铺券和3张商品券。我们要在这个额度内精打细算，把券发给最有价值的顾客和最容易转化的场景。不能滥发，不然既浪费额度又降低券的价值感。我们会帮您规划好每月的发券计划，确保每一张券都发挥最大价值。"
+                </div>
+            </div>
+        </section>
+
+        <!-- 第八章：活动组合建议 -->
+        <section id="section-8" class="section-card">
+            <h2 class="section-title">八、活动组合建议</h2>
+
+            <div class="script-card">
+                <div class="script-title">📋 基础组合（新店必备）</div>
+                <div class="script-content">
+                    <strong>适用场景：</strong>新店开业或刚上线外卖平台<br><br>
+                    <strong>活动配置：</strong><br>
+                    • 满减活动（三档）：满20减3、满40减7、满70减12<br>
+                    • 新客立减：3-5元<br>
+                    • 下单返券：满35元返5元券<br><br>
+                    <strong>话术：</strong>"老板，您的店刚上线，我们建议先用这套基础组合把框架搭起来。满减覆盖不同客单价，新客立减吸引第一批顾客，下单返券培养复购习惯。这三个活动成本可控，但能快速建立起店铺的活动体系，让顾客感受到优惠力度。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">📋 进阶组合（冲量阶段）</div>
+                <div class="script-content">
+                    <strong>适用场景：</strong>店铺运营一段时间后，需要快速提升订单量<br><br>
+                    <strong>活动配置：</strong><br>
+                    • 满减活动 + 折扣商品（2-3个引流款）<br>
+                    • 减配送费：按距离减或统一减2元<br>
+                    • 买赠活动：选1-2个爆款商品<br>
+                    • 集点返券：7天3单返5元<br><br>
+                    <strong>话术：</strong>"您店铺现在需要冲量，我们建议加大活动力度。在基础满减的基础上，增加几个折扣商品做引流，再配合减配送费降低下单门槛。买赠活动能打造爆款，集点返券促进复购。这套组合能快速带动订单增长，把店铺权重提上来。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">📋 高级组合（稳定盈利）</div>
+                <div class="script-content">
+                    <strong>适用场景：</strong>店铺订单稳定，需要在保证利润的同时持续增长<br><br>
+                    <strong>活动配置：</strong><br>
+                    • 满减活动（优化后）+ 智能调控<br>
+                    • 精准营销：定向维护高价值顾客<br>
+                    • 下单返券 + 集点返券：双重促复购<br>
+                    • 折扣商品（限量限时）<br><br>
+                    <strong>话术：</strong>"您的店铺已经进入稳定期了，现在要追求精细化运营。满减开启智能调控节省成本，用精准营销维护高价值顾客，双重返券机制提升复购率。折扣商品做成限时限量活动，既能冲量又不影响整体利润。这套组合能让您在盈利的基础上持续增长。"
+                </div>
+            </div>
+
+            <div class="script-card">
+                <div class="script-title">📋 节日组合（大促必备）</div>
+                <div class="script-content">
+                    <strong>适用场景：</strong>节假日、店庆日等特殊时期<br><br>
+                    <strong>活动配置：</strong><br>
+                    • 满减活动（加大力度）<br>
+                    • 折扣商品（4-5折爆款）<br>
+                    • 买赠活动（节日主题赠品）<br>
+                    • 新客立减 + 精准营销：冲新老客双增长<br><br>
+                    <strong>话术：</strong>"节假日是外卖的黄金时期，竞争也最激烈。我们建议您这个时候加大活动力度抢市场。满减力度比平时大一点，折扣商品做到4-5折吸睛，买赠搭配节日主题制造氛围。同时用新客立减和精准营销，新老客一起抓。虽然短期利润会少一些，但能快速积累客户和口碑，长期来看非常划算。"
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-brand">🎯 呈尚策划</div>
+        <div class="footer-text">专业的美团外卖运营服务商</div>
+        <div class="footer-text" style="margin-top: 0.5rem; font-size: 0.9rem;">
+            本话术集基于美团外卖活动知识体系，结合真实运营经验编写<br>
+            所有话术遵循自然、专业、有温度的沟通风格，适用于微信群客服场景
+        </div>
+        <div class="footer-text" style="margin-top: 1rem; opacity: 0.6; font-size: 0.85rem;">
+            © 2025 呈尚策划 | 最后更新：2025年
+        </div>
+    </footer>
+
+</body>
+</html>
